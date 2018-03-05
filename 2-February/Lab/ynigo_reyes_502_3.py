@@ -4,27 +4,23 @@ import random
 
 def problem_1a():
 
-    # This is the number triangle part
-    n = 5  # 5 rows
-    for i in range(1, n + 1):  # range is not inclusive so we need to add 1
-        print()  # We need to make sure the next row is printed in the next line
-        for j in range(1, i + 1):  # range is not inclusive... plus one
-            # We put end so that the next j won't print on the next line
+    n = 5  		# 5 rows
+    for i in range(1, n + 1):  		# range is not inclusive so we need to add 1
+        print()  					# We need to make sure the next row is printed in the next line
+        for j in range(1, i + 1):   # range is not inclusive... plus one
+            						# We put end so that the next j won't print on the next line
             print(j, end="")
     print('\n')
 
-    # This is the star pyramid part
-
-
 def problem_1b():
-    n = 5  # of rows
-    for i in range(1, n + 1):  # Create this many rows
+    n = 5  						# of rows
+    for i in range(1, n + 1):   # Create this many rows
         print(i * " ", end="")  # Print this many spaces
         if i == 5:
             print("*")
         elif i < 5:
-            for j in range(0, n - i):  # prints out the amount of stars
-                print("*", end="")  # print j amount of stars
+            for j in range(0, n - i):   # prints out the amount of stars
+                print("*", end="")  	# print j amount of stars
             print(" ", end="")
             for k in range(0, n - i):
                 print("*", end="")
@@ -33,10 +29,10 @@ def problem_1b():
 
 
 def problem_2():
-    ask_again = True  # allows the loop to run for the first time
-    response = ""  # declare
+    ask_again = True  	# allows the loop to run for the first time
+    response = ""  		# declare
 
-    while ask_again is True:  # program loop
+    while ask_again is True:
         print(
             """\nWhat would you like to do?\n
             1) Add\n
@@ -44,25 +40,26 @@ def problem_2():
             3) Multiply\n
             4) Divide\n
             Type quit if you want to quit
-            """)  # The options that the user sees
-        response = input(">> ").upper(
-        )  # Takes the response and saves it in response
+            """)
 
-        quit_statements = ["QUIT", "Q"]  # valid quit statements
+        response = input(">> ").upper()
+
+        quit_statements = ["QUIT", "Q"]  						# valid quit statements
         valid_options = ["1", "2", "3", "4"] + quit_statements  # valid options
 
-        if response not in valid_options:  # if the user gives an invalid response
+        if response not in valid_options: 			# if the user gives an invalid response
             print("Please input a valid option")
             continue
 
-        elif response not in quit_statements:  # takes the user's input
+        elif response not in quit_statements:  		# takes the user's input
             first_number = int(
                 input("What number would you like to use? \n>> "))
             second_number = int(
                 input("What is the next number you would like to use? \n>> "))
-        elif response in quit_statements:  # if the user wants to quit...
+        elif response in quit_statements:  			# if the user wants to quit...
             ask_again = False
-            continue  # will close loop and end program with ask_again equalling false
+            continue 								# will close loop and end program
+													# with ask_again equalling false
 
         # These are the options for the use. These functions take the numbers
         # given and passes them on to their functions
@@ -75,7 +72,7 @@ def problem_2():
         elif response == "4":
             divide(first_number, second_number)
 
-
+# Outside functions used in problem_2
 def add(x, y):
     print(x + y)
 
@@ -94,23 +91,23 @@ def divide(x, y):
 
 def problem_3a():
     ask_again = True
-    while ask_again is True:
-        # Same ask_again technique used above
+
+    while ask_again is True:		# Same ask_again technique used above
         print("Give an integer")
-        user_input = input(">> ")  # Gets the user's input
-        if user_input.isdigit() is True:  # Checks to see if it is an integer
-            # saves the return of the prime function
-            result = prime(user_input)
+        user_input = input(">> ")   # Gets the user's input
+
+        if user_input.isdigit() is True:  	# Checks to see if it is an integer
+           	result = prime(user_input)		# saves the return of the prime function
             print(result)
+
         else:
-            # If the user input is not an integer...
-            print("That is not an integer")
+            print("That is not an integer")	# If the user input is not an integer...
 
 
 def problem_3b():
-    for number in range(1, 101):  # tests 1 to 100
+    for number in range(1, 101):  	# tests 1 to 100
         result = prime(number)
-        if result is True:  # Displays only the prime numbers
+        if result is True:  		# Displays only the prime numbers
             print("{} is a prime number".format(number))
 
 
@@ -121,8 +118,8 @@ def prime(integer):
     if integer <= 0:
         return "This is a negative number or 0"
 
-    # If the integer cannot be divided by these numbers and are not these numbers
-    # themselves, they are prime
+    # If the integer cannot be divided by these numbers
+	# and are not these numbers themselves, they are prime
     elif integer % 2 == 0 and integer != 2:
         return False
     elif integer % 3 == 0 and integer != 3:
@@ -141,8 +138,8 @@ def main_problem_4():
     print("The ciel function takes a float and rounds it down to the nearest integer")
     print("The ciel function takes a or float and rounds it up to the nearest integer\n")
 
-    user_input = float(input(("Give number>> ")))  # Casts the user's input to a float
-    user_input_2 = ""  # Declate
+    user_input = float(input(("Give number>> ")))  	# Casts the user's input to a float
+    user_input_2 = ""  								# Declate
 
     print("This is the radians in degrees: {}".format(math.degrees(user_input)))
     user_input_2 = float(input("hypot requries two numbers. What is the second number?: "))
@@ -154,9 +151,9 @@ def main_problem_4():
 def problem_5():
     user_number = float(input("What number would you like the computer to guess?: "))
     correct = False
-    tries = 0  # Declare
-    a = 0  # Bottom of guessing range
-    b = 100  # Top of guessing range
+    tries = 0  	# Declare
+    a = 0  		# Bottom of guessing range
+    b = 100  	# Top of guessing range
 
     while not correct:
         guess = random.randint(a, b)
@@ -178,10 +175,10 @@ def problem_5():
 
 
 if __name__ == '__main__':
-    # problem_1a()
+    problem_1a()
     problem_1b()
-    # problem_2()
-    # problem_3a()
-    # problem_3b()
-    # main_problem_4()
-    # problem_5()
+    problem_2()
+    problem_3a()
+    problem_3b()
+    main_problem_4()
+    problem_5()

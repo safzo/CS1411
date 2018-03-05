@@ -8,17 +8,17 @@ import random
 
 def problem_1():
 	print("Problem 1")
-	# This is our representation of our classroom
-	a = 20
+
+	a = 20    # This is a representation of our classroom
 	b = 21
 	c = 22
 
-	# This is the list of the classrooms' student count so that I can run it
-	# through the for loop
+	# This is the list of the classrooms' student count 
+	# so that I can run it through the for loop
 	number_of_students = [a, b, c]
 
-	# We need to instantiate "total" so that we have a starting point when adding
-	# all of the desks together. We start adding from 0
+	# We need to instantiate "total" so that we have a starting point
+	# when adding all of the desks together. We start adding from 0
 	total = 0
 
 	# Loops through the number of students in the classrooms
@@ -35,8 +35,8 @@ def problem_1():
 
 def problem_2():
 	print("Problem 2")
-	# This is the representation of our years
-	test_1 = 2000
+
+	test_1 = 2000  # This is the representation of our years
 	test_2 = 2012
 	test_3 = 2100
 
@@ -84,7 +84,6 @@ def problem_3():
 def problem_4():
 	# This is a list of denominators
 	denominators = list(range(2, 11))
-	# Instantiates a list
 	list_of_fractions = []
 
 	for i in denominators:
@@ -99,8 +98,7 @@ def problem_4():
 def problem_5():
 	ask_again = True
 	# This loop will keep running until the ask_again variable holds True
-	while ask_again is True:
-		# Takes the user input as an integer
+	while ask_again: # Takes the user input as an integer
 		try:
 			user_input = int(input("Give me a number that is divisible by 2: "))
 			if user_input % 2 == 0:
@@ -108,8 +106,8 @@ def problem_5():
 				# We break the loop by saying that ask_again is False
 				ask_again = False
 			elif user_input % 2 != 0:
-				# Since we are not changing the value of ask_again, it will
-				# keep asking again
+				# Since we are not changing the value of
+				# ask_again, it will keep asking again
 				print("WRONG! That's not divisible by two")
 
 		except ValueError:
@@ -146,13 +144,8 @@ def problem_6():
 
 if __name__ == "__main__":
 	problem_1()
-	print(3 * "\n")
 	problem_2()
-	print(3 * "\n")
 	problem_3()
-	print(3 * "\n")
 	problem_4()
-	print(3 * "\n")
 	problem_5()
-	print(3 * "\n")
 	problem_6()

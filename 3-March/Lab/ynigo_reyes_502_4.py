@@ -71,6 +71,7 @@ def problem_5():
 		elif listOfNumbers[index] > listOfNumbers[index - 1]:   # Compare the current iteration to the previous one
 			print(value)
 
+
 def problem_6():
 	answers = dict()                    # Creates a dictionary that will store our answers
 
