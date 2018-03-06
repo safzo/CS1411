@@ -24,7 +24,7 @@ def problem_2(stringVar):
 def problem_3(testWord):
 
     answers = dict()                    # Creates a dictionary that will store
-    # our answers
+    									# our answers
 
     for i in testWord:                  # Checks to see if the letter has been recorded before and adds to the counter
         if i in answers.keys():         # If the letter has not been recorded, we will start counting from 1
@@ -63,6 +63,8 @@ def problem_5():
 	# I used map because I needed all of the inputs to be integers
 	# I used strip and split as a way for the user to easily input numbers (HackerRank Style)
 	# I had the input turned into a list
+
+	# Sample Input format: "1 3 5 6 7" without the commas
 	listOfNumbers = list(map(int, (input("Give me a list of numbers: ").strip().split(' '))))
 
 	for index, value in enumerate(listOfNumbers):
@@ -80,6 +82,7 @@ def problem_6():
 	# I used strip and split as a way for the user to easily input numbers (HackerRank Style)
 	# I had the input turned into a list
 
+	# Sample Input format: "1 3 5 6 7" without the commas
 	listOfNumbers = list(map(int, (input("Give me a list of numbers: ").strip().split(' '))))
 
 	for i in listOfNumbers:             # Checks to see if the number has been recorded before and adds to the counter
