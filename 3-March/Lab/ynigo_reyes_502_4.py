@@ -18,7 +18,7 @@ def problem_1(stringVariable):
 
 def problem_2(stringVar):
     listStringVar = list(stringVar)   # Creates a list out of the string we pass to the function
-    del listStringVar[1::2]           # Deletes all of the odd indices in that list
+    del listStringVar[3::3]           # Deletes all of the odd indices in that list
     print("".join(listStringVar))     # Joins the list back together with the nothing in between the elements
 
 def problem_3(testWord):
@@ -99,10 +99,10 @@ if __name__ == '__main__':
 
     testWord = "Hello World"
 
-    problem_1(testWord)
-    problem_1(testWord)
+    # problem_1(testWord)
+    # problem_1(testWord)
     problem_2(testWord)
-    problem_3(testWord)
-    problem_4()
-    problem_5()
-    problem_6()
+    # problem_3(testWord)
+    # problem_4()
+    # problem_5()
+    # problem_6()
