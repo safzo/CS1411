@@ -99,10 +99,10 @@ if __name__ == '__main__':
 
     testWord = "Hello World"
 
-    # problem_1(testWord)
-    # problem_1(testWord)
+    problem_1(testWord)
+    problem_1(testWord)
     problem_2(testWord)
-    # problem_3(testWord)
-    # problem_4()
-    # problem_5()
-    # problem_6()
+    problem_3(testWord)
+    problem_4()
+    problem_5()
+    problem_6()
