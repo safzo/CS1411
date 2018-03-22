@@ -154,13 +154,13 @@ def problem_5():
 
 
 if __name__ == '__main__':
-    problem_1()
-    problem_2()
-    problem_3()
+    # problem_1()
+    # problem_2()
+    # problem_3()
 
-    # Required input format:
-    # "1 2 4 6 7 0" without quotes, the 0 is required
-    listOfNumbers = list(map(str, (input("Give me a list of numbers: ").strip().split(' '))))
-    problem_4(listOfNumbers)
+    # # Required input format:
+    # # "1 2 4 6 7 0" without quotes, the 0 is required
+    # listOfNumbers = list(map(str, (input("Give me a list of numbers: ").strip().split(' '))))
+    # problem_4(listOfNumbers)
 
     problem_5()
